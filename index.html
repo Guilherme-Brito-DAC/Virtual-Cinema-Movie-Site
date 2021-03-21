@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/fakeLoader.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <title>Movie Site</title>
+        <link rel="icon" href="https://img.icons8.com/fluent/48/ffffff/movie.png">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script src="js/jquery-3.3.1.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="menu">
+                <div>
+                </div>
+                <div style="display:flex;">
+                    <img src="https://img.icons8.com/fluent-systems-filled/100/ffffff/like.png" class="menuicons" id="heart"/>
+                    <img src="https://img.icons8.com/android/100/ffffff/clock.png" class="menuicons" id="clock"/>
+                    <img src="https://img.icons8.com/fluent-systems-filled/100/ffffff/settings.png" class="menuicons" id="gear"/>
+                    <p id="name" style="font-size: 1rem;">Usuário</p>
+                    <img src="perfil/perfil.jpg" class="perfil"/>    
+                </div>
+            </div>
+        </header>
+        <div class="banner">
+            <div style="display:flex;">
+                <div class="black1">
+                    <div class="textmenu">
+                        <img src="perfil/logo.png"/>
+                        <p id="desc" style="padding-top: 2rem;">Encontre e assista os seus filmes favoritos, assista também os lançamentos e os clássicos do cinema, tudo totalmente gratuito e seguro!</p>
+                        <span style="display:flex;padding-top: 2rem;justify-content: center;"><button class="play">Logar</button>  <a href="#">Se Cadastrar</a></span>    
+                    </div>
+                </div>
+                <div class="black">
+                </div>
+            </div>
+        </div>
+        <main>
+            <div>
+                <h1>Mais Populares</h1>
+                <div class="popular">   
+                </div>
+            </div>
+            <div class="trailers" style="margin-top: 44rem;">
+                <iframe src="https://www.youtube.com/embed/wZti8QKBWPo"  allowfullscreen></iframe>
+                <div style="margin-left: 2rem;padding: 2rem;width: 50%;">
+                    <h1 style="font-size: 2.5rem;">Nobody</h1>
+                    <p style="text-align: center;">2021 ‧ Action/Drama ‧ 1h 32m </p>
+
+                    <span style="display: flex;justify-content: space-between;">
+                    <div class="star-rating" >
+                    <input id="star-5" type="radio" name="rating" value="5" checked/>
+                    <label for="star-5" title="5 stars">★</label>
+                    &nbsp;
+                    <input id="star-4" type="radio" name="rating" value="4" />
+                    <label for="star-4" title="4 stars">★</label>
+                    &nbsp;
+                    <input id="star-3" type="radio" name="rating" value="3" />
+                    <label for="star-3" title="3 stars">★</label>
+                    &nbsp;
+                    <input id="star-2" type="radio" name="rating" value="2" />
+                    <label for="star-2" title="2 stars">★</label>
+                    &nbsp;
+                    <input id="star-1" type="radio" name="rating" value="1" />
+                    <label for="star-1" title="1 star">★</label>
+                    </div>
+                    <div style="display:flex;">
+                        <img src="https://img.icons8.com/fluent-systems-filled/100/ffffff/like.png" class="trailericon" id="heart"/>
+                        <img src="https://img.icons8.com/android/100/ffffff/clock.png" class="trailericon"  id="clock"/>    
+                    </div>
+                    
+                </span>
+                       
+                    <p style="font-size: 2rem;">Um espectador que intervém para ajudar uma mulher sendo assediada por um grupo de homens se torna o alvo de um traficante vingativo</p> 
+                    <button class="play">Me avise</button>
+                </div>
+            </div>
+            <div style="margin-top: 2rem;">
+                <h1>Mais votados</h1>
+                <div class="popular" id="rated">
+                </div>
+            </div>
+            <div style="margin-top: 47rem;">
+                <div style="display:flex;justify-content: space-around;align-items: center;margin-bottom: 3rem;">
+                    <div class="search">
+                        <input type="text" placeholder="Pesquisar" id="search" >   
+                        <button><img src="https://img.icons8.com/android/20/ffffff/search.png"/></button>
+                    </div>
+                </div>
+                <div class="type">
+                </div>
+                <div class="list">
+                </div>
+                <div class="pagination" style="margin-bottom: 2rem;">
+                    <ul>
+                        <li><img src="https://img.icons8.com/ios-filled/15/ffffff/chevron-left.png" style="margin-right: 1rem;display:none" onclick="pagination(0)" id="prev"/></li>
+                        <li class="pagenumber"><button value=1 onclick="sort(this.value)" id="btnpage1">1</button></li>
+                        <li class="pagenumber"><button value=2 onclick="sort(this.value)" id="btnpage2">2</button></li>
+                        <li class="pagenumber"><button value=3 onclick="sort(this.value)" id="btnpage3">3</button></li>
+                        <li class="pagenumber"><button value=4 onclick="sort(this.value)" id="btnpage4">4</button></li>
+                        <li class="pagenumber"><button value=5 onclick="sort(this.value)" id="btnpage5">5</button></li>
+                        <li><img src="https://img.icons8.com/ios-filled/15/ffffff/chevron-left.png" style="transform: rotate(180deg);margin-left: 1rem" onclick="pagination(1)"/></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer>
+        </footer>
+        <div class="fakeLoader"></div>
+        <script src="js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/fakeLoader.min.js"></script>
+        <script>
+            $('.fakeLoader').fakeLoader({
+                timeToHide:500,
+                bgColor:"#18191c",
+                spinner:"spinner2"
+            });
+        </script>
+        <script></script>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/fakeLoader.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <title>Player</title>
+        <link rel="icon" href="https://img.icons8.com/fluent/48/ffffff/movie.png">
+    </head>
+    <body>
+        <div class="close"><a href="index.html"><img src="https://img.icons8.com/ios-glyphs/50/ffffff/macos-close.png"/></a></div>
+        <div class="videoplayer">
+
+            <iframe id="trailer" src=""  allowfullscreen="allowfullscreen">
+            </iframe>
+            <span class="error"><p style="text-align: center;font-size: 4rem;">:(</p><p id="error"></p></span>
+
+        </div>
+        <main>
+            <div style="display:flex;justify-content: space-between;">
+                <div class="details">
+                    <p id="name"></p>
+                    <span style="display:flex"><p id="year"></p> <p style="margin-left: 1rem;margin-right: 1rem;">-</p> <p id="genres"></p></span>
+                    <span style="display:flex">
+                    <div class="star-rating">
+                        <input id="star-5" type="radio" name="rating" value="5" />
+                        <label for="star-5" title="5 stars">★</label>
+                        &nbsp;
+                        <input id="star-4" type="radio" name="rating" value="4" />
+                        <label for="star-4" title="4 stars">★</label>
+                        &nbsp;
+                        <input id="star-3" type="radio" name="rating" value="3" />
+                        <label for="star-3" title="3 stars">★</label>
+                        &nbsp;
+                        <input id="star-2" type="radio" name="rating" value="2" />
+                        <label for="star-2" title="2 stars">★</label>
+                        &nbsp;
+                        <input id="star-1" type="radio" name="rating" value="1" />
+                        <label for="star-1" title="1 star">★</label>
+                    </div>
+                    <p id="vote"></p>
+                    </span>
+                    <p id="sinopse"></p>
+                    <span style="display:flex">
+                        <img src="https://img.icons8.com/fluent-systems-filled/100/ffffff/like.png" class="menuicons" id="heart"/>
+                        <p style="margin-top: 1.5rem;">Adicionar aos favoritos</p>
+                    </span>
+                </div>
+                <div id="images">
+                </div>
+                <div>
+                    <p>Filmes Parecidos</p>
+                    <div id="similar">
+                    </div>
+                </div>
+            </div>
+            <br>
+        </main>
+        <div id="variable"></div>
+        <div class="fakeLoader"></div>
+        <script src="js/player.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/fakeLoader.min.js"></script>
+        <script>
+            $('.fakeLoader').fakeLoader({
+                timeToHide:500,
+                bgColor:"#18191c",
+                spinner:"spinner2"
+            });
+        </script>
+    </body>
+</html>
