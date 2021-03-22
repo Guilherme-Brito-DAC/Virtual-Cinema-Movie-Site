@@ -4,7 +4,7 @@
 <img src="https://i.imgur.com/ns3ISuq.png"/>
 
 ## Player
-<img src="https://i.imgur.com/ZrRPrFd.png"/>
+<img src="https://i.imgur.com/AtEVoJt.png"/>
 
 ## Mobile
 <img src="https://i.imgur.com/X5k8i7B.png"/>
